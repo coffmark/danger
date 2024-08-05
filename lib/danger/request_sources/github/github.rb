@@ -329,6 +329,8 @@ module Danger
         is_markdown_content = kind == :markdown
         emoji = { warning: "warning", error: "no_entry_sign", message: "book" }[kind]
 
+        puts "\n debug: messages: #{messages}"
+
         messages.reject do |m|
           next false unless m.file && m.line
 
